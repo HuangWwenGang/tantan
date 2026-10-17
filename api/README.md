@@ -1,5 +1,7 @@
 # 滩摊 · API
 
+**简体中文** | [English](README.en.md)
+
 三个前端共用的 Express + TypeScript 服务，开发地址为 `http://localhost:8787`，数据保存在 MySQL 8。
 
 按[仓库根目录快速启动](../README.md#快速启动)创建 `api/.env.local` 并启动 MySQL 后，在根目录运行：
