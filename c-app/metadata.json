@@ -1,0 +1,7 @@
+{
+  "name": "TanTan - 滩摊",
+  "description": "A Hainan-style beachside street food delivery mini-app interface.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,19 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: tantan
+      MYSQL_USER: tantan
+      MYSQL_PASSWORD: local-demo-db-password
+      MYSQL_ROOT_PASSWORD: local-demo-root-password
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - tantan_demo_mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+volumes:
+  tantan_demo_mysql:

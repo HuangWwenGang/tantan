@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>滩摊 TanTan</title>
+    <script src="/tailwind.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'island-bg': '#FBFEFD', // 背景：几乎纯白，略带一点点冷色
+              'island-sidebar': '#E6F3F5', // 侧边栏：盐系淡蓝 (Salt Blue)
+              'island-dark': '#163A2F', // 主色：深森林绿 (用于文字)
+              'island-primary': '#4ECDC4', // 提亮色：蒂芙尼蓝
+              'island-mint': '#D3EDE6', // 装饰色
+              'island-surface': '#FFFFFF',
+              'text-secondary': '#7A9992', // 次级文字
+            },
+            fontFamily: {
+              sans: ['"Noto Sans SC"', 'sans-serif'],
+              english: ['"Outfit"', 'sans-serif'],
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(22, 58, 47, 0.03)',
+              'card': '0 8px 24px -6px rgba(22, 58, 47, 0.06)',
+            },
+            backgroundImage: {
+              'gradient-nature': 'linear-gradient(180deg, #EFFBF9 0%, #FBFEFD 100%)', 
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FBFEFD;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+  
+
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "TanTan - Island Street Food",
+  "description": "A Hainan-style street food delivery app interface.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

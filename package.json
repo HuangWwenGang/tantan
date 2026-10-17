@@ -1,0 +1,28 @@
+{
+  "name": "tantan-street-food",
+  "version": "1.0.0",
+  "private": true,
+  "description": "滩摊：海岛地摊外卖多端应用 · Vibe Coding 作品",
+  "workspaces": [
+    "api",
+    "c-app",
+    "b-app",
+    "admin-app"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n API,Customer,Merchant,Admin \"npm run dev -w api\" \"npm run dev -w c-app\" \"npm run dev -w b-app\" \"npm run dev -w admin-app\"",
+    "build": "npm run build --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "node --import tsx --test tests/availability.test.ts tests/pricing.test.ts"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "tsx": "4.23.15"
+  },
+  "overrides": {
+    "qs": "6.16.1"
+  }
+}
